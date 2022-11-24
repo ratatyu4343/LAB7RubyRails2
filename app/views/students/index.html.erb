@@ -1,0 +1,6 @@
+<h2><%= t "students" %></h2>
+<ul  class="list-group">
+  <% @students.each do |s| %>
+    <li class="list-group-item"><%= link_to s.name, s%></li>
+  <%end %>
+</ul>

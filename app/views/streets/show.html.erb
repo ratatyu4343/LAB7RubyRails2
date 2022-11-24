@@ -1,0 +1,10 @@
+<h2><%= @street.name %></h2>
+<ul class="list-group">
+  <% House.where(street_id: @street.id).to_a.each do |h| %>
+    <% if Student.where(house_id: h.id).to_a.length > 0 %>
+      <li class="list-group-item"><%= link_to h.number, h%></li>
+    <%else%>
+      <% h.destroy %>
+    <% end %>
+  <% end %>
+</ul>

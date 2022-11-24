@@ -1,0 +1,6 @@
+<h2><%= @house.number%></h2>
+<ul class="list-group">
+  <% Student.where(house_id: @house.id).to_a.each do |s|%>
+    <li class="list-group-item"> <%= link_to s.name, s %></li>
+  <% end %>
+</ul>

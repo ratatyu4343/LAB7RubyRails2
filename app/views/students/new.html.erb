@@ -1,0 +1,15 @@
+<h1><%= t "add" %></h1>
+<%= form_for @student do |s| %>
+  <div class="form-group border">
+    <%= s.label :name, t("name")%>
+    <%= s.text_field :name, :class =>"form-control"%>
+    <%= s.label :apartment, t("appar")%>
+    <%= s.number_field :apartment, :class => "form-control"%>
+    <label for="house"><%= t "house" %></label>
+    <input type="number" name="house" value="" class="form-control">
+    <label for="street"><%= t "street" %></label>
+    <input type="text" name="street" value="" class="form-control">
+    <br>
+    <%= s.submit t("add"), :class => "btn btn-primary" %>
+  </div>
+<% end %>

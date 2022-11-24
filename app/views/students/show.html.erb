@@ -1,0 +1,6 @@
+<h2><%= @student.name %></h2>
+<h3><%= t "street" %>: <%=@street.name %></h3>
+<h3><%= t "house" %>: <%=@house.number %></h3>
+<h3><%= t "appar" %>: <%=@student.apartment %></h3>
+<%= button_to t("edit"), edit_student_path, :method => :get ,:class => "btn btn-danger" %>
+<br>

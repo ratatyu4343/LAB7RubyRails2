@@ -1,0 +1,11 @@
+<h2><%= t "streetStat" %></h2>
+<ul class="list-group">
+  <% @streets.each do |s|%>
+    <% studentsCount = s.getStudentsCount %>
+    <% if studentsCount > 0 %>
+      <li class="list-group-item"><%= link_to (s.name+" ("+studentsCount.to_s+" "+t("studentsCount")+")"), s%></li>
+    <% else %>
+      <% s.destroy %>
+    <% end %>
+  <% end %>
+</ul>
